@@ -23,5 +23,7 @@
 
     .projectsContainer{
         display: flex;
+        flex: column;
+        gap: 30px;
     }
 }
