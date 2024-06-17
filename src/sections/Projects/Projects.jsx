@@ -10,6 +10,19 @@ function Projects() {
         src={ProjectOne} 
         link="https://github.com/mariocamarena/flappy_bird_concept_game"
         h3="flappy_bird_concept_game"
+        p = "this is a description"
+        />
+        <ProjectCard 
+        src={ProjectOne} 
+        link="https://github.com/mariocamarena/flappy_bird_concept_game"
+        h3="flappy_bird_concept_game"
+        p = "this is a description"
+        />
+        <ProjectCard 
+        src={ProjectOne} 
+        link="https://github.com/mariocamarena/flappy_bird_concept_game"
+        h3="flappy_bird_concept_game"
+        p = "this is a description"
         />
       </div>
     </section>
