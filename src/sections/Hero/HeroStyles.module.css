@@ -2,81 +2,154 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
     text-align: center;
     height: 100vh;
-    min-height: 500px;
-    padding: 20px;  /* Add padding for breathing room */
-    max-width: 100%; /* Full width for mobile */
+    background-color: var(--background-color);
+    padding: 20px;
 }
 
-.hero {
-    max-width: 200px;
-    margin: 0 auto;  /* Center the image */
-}
-
-span {
+.nameAndLines {
     display: flex;
-    gap: 25px;
+    flex-direction: column;
+    align-items: flex-start; /* Restore the offset alignment */
+    position: relative;
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Keep the offset for both names */
+    margin: 0;
+}
+
+.firstName {
+    font-size: 72px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    margin-left: -80px; /* Restore the offset for Mario */
+}
+
+.lastName {
+    font-size: 72px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    margin-left: 90px; /* Restore the offset for Camarena */
+}
+
+.layoutContainer {
+    display: flex;
     justify-content: center;
+    align-items: flex-start; /* Align both sections at the top */
+    width: 100%;
+    gap: 60px;
+    max-width: 1200px;
 }
 
-span a img {
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.centerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.socialAndResume {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center icons and resume button */
+}
+
+.icon {
     width: 30px;
-}
-
-a {
-    width: fit-content;
-    align-self: center;
+    height: 30px;
 }
 
 button {
     background-color: var(--btn-color);
     color: var(--btn-text-color);
     border: none;
-    border-radius: 20px;
-    width: 126px;
-    height: 50px;
-    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
     font-weight: bold;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-    transform: scale(1.05);
+    background-color: var(--accent-color);
 }
 
 button:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    background-color: var(--btn-color);
+}
+
+.heroImage {
+    max-width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.devType {
+    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--text-color);
+}
+
+.aboutMeSection {
+    max-width: 260px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.aboutMeText {
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--text-color);
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.contactSection {
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    text-align: center;
 }
 
 .description {
-    max-width: 24ch;
-    align-self: center;
+    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+    margin: 20px 0;
+    max-width: 600px;
+    color: var(--text-color);
 }
 
-.info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+/* Decorative lines */
+.lineTop,
+.lineBottom {
+    height: 2px;
+    width: 400px;
+    background-color: var(--text-color);
+    margin: 10px 0;
 }
 
-/* Media queries for larger screens */
-@media (min-width: 768px) {
-    .container {
-        max-width: 1200px;  /* Ensure content doesn't become too wide */
-        padding: 40px;
-    }
+.lineTop {
+    align-self: flex-start;
+    margin-left: -120px; /* Ensure top line moves left */
+}
 
-    .hero {
-        max-width: 300px;  /* Increase hero image size on desktop */
-    }
-
-    button {
-        width: 150px;  /* Increase button size for desktop */
-        height: 60px;
-    }
+.lineBottom {
+    align-self: flex-end;
+    margin-right: -80px; /* Ensure bottom line moves right */
+    margin-left: 20px;
 }

@@ -7,28 +7,45 @@ import CV from '../../assets/cv.pdf';
 function Hero() {
   return (
     <section id='hero' className={styles.container}>
-      <div>
-        <img className={styles.hero} src={heroImg} alt="Main hero img" />
+      <div className={styles.nameAndLines}>
+        <div className={styles.lineTop}></div> {/* Decorative top line */}
+        <div className={styles.nameContainer}>
+          <h1 className={styles.firstName}>Mario</h1>
+          <h1 className={styles.lastName}>Camarena</h1>
+        </div>
+        <div className={styles.lineBottom}></div> {/* Decorative bottom line */}
       </div>
 
-      <div className={styles.info}>
-        <h1>Mario<br />Camarena</h1>
-        <h2>Type of dev</h2>
+      <div className={styles.layoutContainer}>
+        <div className={styles.leftSection}>
+          <img className={styles.heroImage} src={heroImg} alt="Mario Camarena" />
+          <p className={styles.devType}>Full-Stack Developer</p> {/* Type of developer text */}
+          <div className={styles.socialAndResume}>
+            <a href="https://www.linkedin.com/in/mario-camarena-044ab9255/" target='_blank' rel="noopener noreferrer">
+              <img src={linkedinLight} alt="LinkedIn icon" className={styles.icon} />
+            </a>
+            <a href="https://github.com/mariocamarena" target='_blank' rel="noopener noreferrer">
+              <img src={githubLight} alt="GitHub icon" className={styles.icon} />
+            </a>
+            <a href={CV}>
+              <button className='hover'>
+                Resume
+              </button>
+            </a>
+          </div>
+        </div>
 
-        <span>
-          <a href="https://www.linkedin.com/in/mario-camarena-044ab9255/" target='_blank' rel="noopener noreferrer">
-            <img src={linkedinLight} alt="LinkedIn icon" />
-          </a>
-          <a href="https://github.com/mariocamarena" target='_blank' rel="noopener noreferrer">
-            <img src={githubLight} alt="GitHub icon" />
-          </a>
-        </span>
-
-        <p className={styles.description}>This is a paragraph that is short and to the point.</p>
-
-        <a href={CV}>
-          <button className='hover'>Resume</button>
-        </a>
+        <div className={styles.centerSection}>
+          <div className={styles.aboutMeSection}>
+            <p className={styles.aboutMeText}>
+              lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem loremlorem lorem lorem lorem
+            </p> {/* About Me section */}
+          </div>
+          <div className={styles.contactSection}>
+            <h2>Contact Me</h2>
+            {/* Add your contact form or details here */}
+          </div>
+        </div>
       </div>
     </section>
   );
