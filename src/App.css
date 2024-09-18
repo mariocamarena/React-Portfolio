@@ -1,68 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+/* Root variables for the new color scheme */
 :root {
-    --backkground-color: #fff;
-    --btn-color: #0987f2;
-    --btn-text-color:#fff;
-    --project-card-bg:#ffffff00;
-    --text-color: #222;
-    --form-text-color: #555;
-    --footer-text-color: #888;
+    --background-color: #f9f9f9;       /* Light warm gray background */
+    --btn-color: #00a6a6;              /* Teal for buttons and nav */
+    --btn-text-color: #ffffff;         /* White text for buttons */
+    --project-card-bg: #ffffff;        /* White project card background */
+    --text-color: #2d2d2d;             /* Dark slate gray for text */
+    --accent-color: #ff6f61;           /* Soft peach/salmon for accents */
+    --form-text-color: #4f4f4f;        /* Medium gray for form text */
+    --footer-text-color: #737373;      /* Light gray for footer */
 }
 
-[data-theme='dark'] {
-    --backkground-color: #222;
-    --btn-color: #fff;
-    --btn-text-color:#222;
-    --project-card-bg:#fff;
-    --text-color: #fff;
-    --form-text-color: #fff;
-    --footer-text-color: #bbb;
-}
-
+/* Ensure no margins or padding around the entire page */
 body {
-    background-color: var(--backkground-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
     display: flex;
     justify-content: center;
-    margin: 0 auto 60px;
 }
 
-#root{
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+#root {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
 }
-h1, h2, h3, p{
+
+h1, h2, h3, p {
     color: var(--text-color);
     margin: 0;
     padding: 0;
 }
 
-h2,h3,p{
-    font-family: 'Roboto Mono',monospace;
+h2, h3, p {
+    font-family: 'Roboto Mono', monospace;
 }
 
-h1,h2{
+h1, h2 {
     text-transform: uppercase;
 }
 
-h2,h3{
+h2, h3 {
     font-size: 20px;
 }
-h1{
-    font-family: 'Rubik',sans-serif;
+
+h1 {
+    font-family: 'Rubik', sans-serif;
     font-size: 32px;
 }
 
-p{
-    font-size:16px;
+p {
+    font-size: 16px;
     font-weight: 300;
 }
 
-.sectionTitle{
+.sectionTitle {
     margin-bottom: 30px;
+    color: var(--text-color);
 }
 
-.hover{
-    /*cursor: crosshair; */
+.hover {
     cursor: pointer;
+    background-color: var(--accent-color); /* Accent color on hover */
+    transition: background-color 0.3s ease-in-out;
 }
 
+button {
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--accent-color); /* Softer accent color on hover */
+}
+
+button:active {
+    background-color: var(--btn-color); /* Revert to primary on press */
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: var(--accent-color); /* Soft peach/salmon on hover */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive typography for larger screens */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2, h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
