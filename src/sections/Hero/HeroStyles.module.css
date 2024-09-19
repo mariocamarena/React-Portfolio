@@ -12,14 +12,14 @@
 .nameAndLines {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Restore the offset alignment */
+    align-items: flex-start;
     position: relative;
 }
 
 .nameContainer {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Keep the offset for both names */
+    align-items: flex-start;
     margin: 0;
 }
 
@@ -28,48 +28,69 @@
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
     margin: 0;
-    margin-left: -80px; /* Restore the offset for Mario */
+    margin-left: -80px; /* Restore the offset */
 }
 
 .lastName {
     font-size: 72px;
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
-    margin-left: 90px; /* Restore the offset for Camarena */
+    margin-left: 90px; /* Restore the offset */
 }
 
 .layoutContainer {
     display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align both sections at the top */
+    justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
-    gap: 60px;
     max-width: 1200px;
 }
 
 .leftSection {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
     align-items: center;
-    gap: 10px;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
 .centerSection {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
     align-items: center;
-    gap: 10px;
+    text-align: left;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
 .socialAndResume {
     display: flex;
-    gap: 10px;
-    justify-content: center; /* Center icons and resume button */
+    gap: 15px;
+    align-items: center; /* Vertically center icons and button */
+    justify-content: center; /* Horizontally center the icons and button */
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px; /* Match the width of the resume button */
+    height: 50px; /* Match the height of the resume button */
+    background-color: #f9f9f9; /* Optional background for visual consistency */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Match the resume button's shadow */
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
+    width: 40px; /* Increase the size of the icon */
+    height: 40px; /* Keep the icon size proportional */
+    position: relative;
+    top: 8px; /* Move the icon down to align with the text */
 }
 
 button {
@@ -77,19 +98,25 @@ button {
     color: var(--btn-text-color);
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 15px 30px;
+    font-size: 18px;
     font-weight: bold;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+    margin-top: 20px;
+    width: 140px; /* Fixed width for the resume button */
+    height: 50px; /* Fixed height for the resume button */
+    text-align: center;
 }
 
 button:hover {
     background-color: var(--accent-color);
+    transform: translateY(-3px);
 }
 
 button:active {
     background-color: var(--btn-color);
+    transform: translateY(1px);
 }
 
 .heroImage {
@@ -105,9 +132,8 @@ button:active {
 }
 
 .aboutMeSection {
-    max-width: 260px;
+    max-width: 600px;
     margin-bottom: 10px;
-    text-align: center;
 }
 
 .aboutMeText {
@@ -119,19 +145,28 @@ button:active {
 }
 
 .contactSection {
-    max-width: 300px;
-    padding: 20px;
+    max-width: 400px;
+    padding: 30px;
     border: 1px solid var(--text-color);
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
+    margin-right: -80px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
 }
 
-.description {
-    font-size: 18px;
+.contactSection h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.contactSection p {
+    font-size: 16px;
     font-family: 'Roboto Mono', monospace;
-    margin: 20px 0;
-    max-width: 600px;
+    line-height: 1.6;
     color: var(--text-color);
+    margin-bottom: 15px;
 }
 
 /* Decorative lines */
@@ -145,11 +180,11 @@ button:active {
 
 .lineTop {
     align-self: flex-start;
-    margin-left: -120px; /* Ensure top line moves left */
+    margin-left: -120px;
 }
 
 .lineBottom {
     align-self: flex-end;
-    margin-right: -80px; /* Ensure bottom line moves right */
+    margin-right: -80px;
     margin-left: 20px;
 }
