@@ -9,13 +9,13 @@
 
 /* Individual project tile */
 .projectTile {
-    width: 280px; /* Vertical rectangular size */
-    height: 400px;
+    width: 280px;
+    height: 400px; /* Initial height */
     background-color: #fff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: all 0.4s ease; /* Smooth transition for all properties */
     position: relative;
     cursor: pointer;
 }
@@ -23,14 +23,16 @@
 /* Hover effect for the tiles */
 .projectTile:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    height: 500px; /* Expanded height for hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Elevated shadow on hover */
 }
 
 /* Project image */
 .projectImage {
     width: 100%;
     height: 50%;
-    object-fit: cover;
+    object-fit: contain;
+    display: block;
 }
 
 /* Project details */
@@ -39,18 +41,19 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 50%;
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    transition: max-height 0.3s ease-in-out;
-    max-height: 120px;
+    justify-content: flex-start;
+    transition: all 0.4s ease; /* Smooth transition for hover */
+    height: 50%; /* Initial height for details */
+    opacity: 0.9;
     overflow: hidden;
 }
 
 .projectTile:hover .projectDetails {
-    max-height: 100%; /* Expand on hover to show more details */
+    height: 60%; /* Expand on hover to show more details */
+    opacity: 1;
 }
 
 /* Project title */
@@ -67,18 +70,23 @@
     font-size: 16px;
     color: #555;
     line-height: 1.5;
-    transition: opacity 0.3s ease-in-out;
+    transition: all 0.4s ease; /* Smooth transition */
     opacity: 0;
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
 }
 
 .projectTile:hover .projectDescription {
-    opacity: 1; /* Show description on hover */
+    opacity: 1; /* Fade in on hover */
+    max-height: 200px; /* Expand height to show full content */
+    overflow: visible;
 }
 
-/* Button for external links */
+/* Center the button for external links */
 .projectLink {
-    margin-top: 15px;
-    text-align: center;
+    margin-top: auto;
+    display: flex;
+    justify-content: center; /* Center horizontally */
 }
 
 .projectLink button {
@@ -90,7 +98,7 @@
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease;
 }
 
 .projectLink button:hover {
