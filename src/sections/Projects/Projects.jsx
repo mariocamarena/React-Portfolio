@@ -2,44 +2,51 @@ import styles from './ProjectsStyles.module.css';
 import ProjectOne from '../../assets/viberr.png';
 import ProjectCard from '../../common/ProjectCard';
 
-function Projects() {
-  const projectList = [
-    {
-      src: ProjectOne,
-      link: "https://github.com/mariocamarena/flappy_bird_concept_game",
-      h3: "Flappy Bird Concept Game",
-      p: "This is a description of the Flappy Bird project."
-    },
-    {
-      src: ProjectOne,
-      link: "https://github.com/mariocamarena/another_project",
-      h3: "Another Project",
-      p: "This is a description of another project."
-    },
-    {
-      src: ProjectOne,
-      link: "https://github.com/mariocamarena/yet_another_project",
-      h3: "Yet Another Project",
-      p: "This is a description of yet another project."
-    }
-  ];
 
+function Projects() {
   return (
-    <section id="projects" className={styles.container}>
-      <h1 className='sectionTitle'>Projects</h1>
-      <div className={styles.projectsContainer}>
-        {projectList.map((project, index) => (
-          <ProjectCard
-            key={index}
-            src={project.src}
-            link={project.link}
-            h3={project.h3}
-            p={project.p}
-          />
-        ))}
+    <section id="projects" className={styles.projectsContainer}>
+      <div className={styles.projectTile}>
+        <img src={ProjectOne} alt="Project 1" className={styles.projectImage} />
+        <div className={styles.projectDetails}>
+          <h3 className={styles.projectTitle}>Project 1</h3>
+          <p className={styles.projectDescription}>
+            A brief description of the project. This description expands on hover.
+          </p>
+          <div className={styles.projectLink}>
+            <button>View on GitHub</button>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.projectTile}>
+        <img src={ProjectOne} alt="Project 2" className={styles.projectImage} />
+        <div className={styles.projectDetails}>
+          <h3 className={styles.projectTitle}>Project 2</h3>
+          <p className={styles.projectDescription}>
+            A brief description of the project. This description expands on hover.
+          </p>
+          <div className={styles.projectLink}>
+            <button>View on GitHub</button>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.projectTile}>
+        <img src={ProjectOne} alt="Project 2" className={styles.projectImage} />
+        <div className={styles.projectDetails}>
+          <h3 className={styles.projectTitle}>Project 2</h3>
+          <p className={styles.projectDescription}>
+            A brief description of the project. This description expands on hover.
+          </p>
+          <div className={styles.projectLink}>
+            <button>View on GitHub</button>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
 
 export default Projects;
+
