@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Experience Section Styling */
+.experienceSection {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Section Title */
+.sectionTitle {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 32px;
+    color: #507dba;
+    margin-bottom: 40px;
+}
+
+/* Experience Cards Container */
+.experienceContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual Experience Card */
+.experienceCard {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Experience Card Hover Effect */
+.experienceCard:hover {
+    transform: scale(1.05);
+}
+
+/* Job Title */
+.jobTitle {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 20px;
+    color: #5acca0;
+    margin-bottom: 10px;
+}
+
+/* Company Name */
+.company {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #507dba;
+}
+
+/* Dates */
+.dates {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+/* Job Description */
+.description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Skills Section Styling */
+.skillsSection {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Section Title */
+.sectionTitle {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 32px;
+    color: #507dba;
+    margin-bottom: 40px;
+}
+
+/* Skills Container */
+.skillsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Skill Category */
+.skillCategory {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Category Title */
+.categoryTitle {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 24px;
+    color: #5acca0;
+    margin-bottom: 20px;
+}
+
+/* Skill List */
+.skillList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Skill Badge */
+.skillBadge {
+    background-color: #507dba;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect for Skill Badge */
+.skillBadge:hover {
+    background-color: #5acca0;
+    transform: scale(1.1);
+}

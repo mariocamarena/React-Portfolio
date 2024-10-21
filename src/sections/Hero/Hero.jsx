@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import { faCircleChevronUp } from '@fortawesome/free-solid-svg-icons'; // Import the icon
 import arrow_icon from '../../assets/arrow_icon.svg';
-
 import styles from './HeroStyles.module.css';
 import heroImg from '../../assets/hero-img.png';
 import linkedinLight from '../../assets/linkedin-light.svg';
@@ -12,7 +9,6 @@ import CV from '../../assets/cv.pdf';
 function Hero() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
-  // Function to handle scroll and show the button after leaving the landing page
   const handleScroll = () => {
     if (window.scrollY > window.innerHeight) {
       setShowScrollTop(true);
@@ -21,7 +17,6 @@ function Hero() {
     }
   };
 
-  // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
