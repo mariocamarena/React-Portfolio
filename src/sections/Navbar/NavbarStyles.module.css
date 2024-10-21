@@ -1,34 +1,36 @@
+/* Retro Navbar Styling */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 /* Navbar Container */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 15px 30px;
     width: 100%;
-    max-width: 1200px; /* Ensure the navbar doesn't extend beyond the viewport */
-    margin: 0 auto; /* Center the navbar */
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #564756; /* Dark purple/gray background */
+    border: 4px solid #e5f7d2; /* Light pastel green border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: #f8f9fa; /* Light gray background */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     z-index: 1000;
-    transition: background-color 0.3s ease;
 }
 
 /* Logo Styling */
 .logo a {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 18px;
+    color: #e5f7d2; /* Light pastel green for logo text */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .logo a:hover {
-    color: #0077b6; /* Accent color on hover */
+    color: #5acca0; /* Green/teal hover effect */
 }
 
 /* Navigation Links */
@@ -42,28 +44,33 @@
 }
 
 .navLinks a {
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: #555;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 14px;
+    color: #e5f7d2; /* Light pastel green for link text */
     text-decoration: none;
-    transition: color 0.3s ease;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover Effect for Navigation Links */
+/* Stronger Bounce Effect for Navigation Links */
 .navLinks a:hover {
-    color: #0077b6; /* Accent color */
+    color: #507dba; /* Blue for hover effect */
+    animation: bounce 0.5s ease-in-out;
     font-weight: bold;
+}
+
+/* Bounce Keyframes */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Sticky Navbar: Add background when scrolling */
 .navbar.sticky {
-    background-color: #ffffff; /* Change background on scroll */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhance shadow on scroll */
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .navLinks {
-        display: none; /* Hide links on mobile */
-    }
+    background-color: #564756; /* Keep dark purple/gray background when scrolling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
