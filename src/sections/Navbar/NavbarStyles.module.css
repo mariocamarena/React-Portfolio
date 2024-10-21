@@ -1,50 +1,69 @@
+/* Navbar Container */
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    width: 100%;
+    max-width: 1200px; /* Ensure the navbar doesn't extend beyond the viewport */
+    margin: 0 auto; /* Center the navbar */
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    background-color: var(--btn-color); /* Teal navbar */
-    padding: 15px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    right: 0;
+    background-color: #f8f9fa; /* Light gray background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
-.navList {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
-    max-width: 1200px;
-    width: 100%;
-}
-
-.navList li {
-    margin: 0 15px;
-}
-
-.navList a {
+/* Logo Styling */
+.logo a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
     text-decoration: none;
-    color: var(--btn-text-color); /* White text for links */
-    font-size: 18px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease;
 }
 
-.navList a:hover {
-    color: var(--accent-color); /* Peach/salmon on hover */
+.logo a:hover {
+    color: #0077b6; /* Accent color on hover */
 }
 
-/* Responsive layout */
+/* Navigation Links */
+.navLinks {
+    display: flex;
+    gap: 30px;
+}
+
+.navLinks li {
+    list-style: none;
+}
+
+.navLinks a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Navigation Links */
+.navLinks a:hover {
+    color: #0077b6; /* Accent color */
+    font-weight: bold;
+}
+
+/* Sticky Navbar: Add background when scrolling */
+.navbar.sticky {
+    background-color: #ffffff; /* Change background on scroll */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhance shadow on scroll */
+}
+
+/* Responsive Styling */
 @media (max-width: 768px) {
-    .navList {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navList li {
-        margin: 10px 0;
+    .navLinks {
+        display: none; /* Hide links on mobile */
     }
 }
