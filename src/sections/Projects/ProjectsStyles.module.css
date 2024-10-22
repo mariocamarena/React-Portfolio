@@ -1,106 +1,87 @@
-/* Projects section container */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Projects Section Styling */
+.projectsSection {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Section Title */
+.sectionTitle {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 32px;
+    color: #507dba;
+    margin-bottom: 40px;
+}
+
+/* Projects Container */
 .projectsContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
-    justify-content: space-between;
-    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Individual project tile */
-.projectTile {
-    width: 280px;
-    height: 400px; /* Initial height */
+/* Individual Project Card */
+.projectCard {
     background-color: #fff;
-    border-radius: 15px;
-    overflow: hidden;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s ease; /* Smooth transition for all properties */
-    position: relative;
-    cursor: pointer;
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Hover effect for the tiles */
-.projectTile:hover {
+/* Hover Effect for Project Card */
+.projectCard:hover {
     transform: scale(1.05);
-    height: 500px; /* Expanded height for hover */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Elevated shadow on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Project image */
+/* Project Image */
 .projectImage {
     width: 100%;
-    height: 50%;
-    object-fit: contain;
-    display: block;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-/* Project details */
-.projectDetails {
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    transition: all 0.4s ease; /* Smooth transition for hover */
-    height: 50%; /* Initial height for details */
-    opacity: 0.9;
-    overflow: hidden;
-}
-
-.projectTile:hover .projectDetails {
-    height: 60%; /* Expand on hover to show more details */
-    opacity: 1;
-}
-
-/* Project title */
+/* Project Title */
 .projectTitle {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Press Start 2P', sans-serif;
     font-size: 20px;
-    color: #222;
+    color: #5acca0;
     margin-bottom: 10px;
 }
 
-/* Project description */
+/* Project Description */
 .projectDescription {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-    transition: all 0.4s ease; /* Smooth transition */
-    opacity: 0;
-    max-height: 0; /* Initially hidden */
-    overflow: hidden;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.projectTile:hover .projectDescription {
-    opacity: 1; /* Fade in on hover */
-    max-height: 200px; /* Expand height to show full content */
-    overflow: visible;
-}
-
-/* Center the button for external links */
+/* Project Link */
 .projectLink {
-    margin-top: auto;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-}
-
-.projectLink button {
-    background: linear-gradient(135deg, #007bff, #00a9ff);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 20px;
+    display: inline-block;
+    background-color: #507dba;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-.projectLink button:hover {
-    background: linear-gradient(135deg, #0066cc, #0080cc);
+/* Hover Effect for Project Link */
+.projectLink:hover {
+    background-color: #5acca0;
 }
